@@ -1,0 +1,19 @@
+we can insert img tag inside a tag
+form'un icindeki ferqli inputlar ucun xeyali identityleri name'le isharelenir
+
+
+w3schoolsdan butun html tekrar +
+tek burdaki index faylinda butun html taglarinin istifadesi.   
+istifade olunmush taglarin mentiqe uygun shekilde siralanmasi.
+esas istifade olunmali lazm olan 2 movzu: inputs (form method post) name surname age gender favorite language position (selectl ve option'la ver: police, doctor, engineer), submit button
+inputs: price(ascending, descending) - form method get
+table: 
+thead: name, surname, age, fav lang,position]
+tbody data: name: Kamil, surname: Qaribov, age:26, fav lang: Phyton, position: engineer
+tbody data: name: Aydin, surname: Qaribov, age:24, fav lang: Adobe, position: doctor
+
+
+css'in butun funksiyalarindan istifade; hansisa sayta baxib oxsharini, olmasa youtube, facebook, turbo.az, bina.az
+http methods ve github kecirilmelidi gelen ders;
+
+

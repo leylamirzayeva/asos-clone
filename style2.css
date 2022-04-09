@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-up {
+  background-color: black;
+  height: 60px;
+}
+
+.nav-up > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 5fr 1fr;
+  width: 90%;
+  height: 100%;
+  margin: 0 76px;
+}
+
+img {
+  width: 120px;
+  height: 60%;
+  margin: auto;
+}
+
+.women,
+.men {
+  text-align: center;
+}
+
+.nav-up div a {
+  text-decoration: none;
+  color: white;
+  font-family: futura-pt, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.men {
+  border-right: 1px solid white;
+}
+
+.nav-up div.women:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  background-size: 60px;
+}
+
+.nav-up div.men:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+}
+
+.nav-up ul div:hover a {
+  color: inherit;
+  background-size: 60px;
+}
+
+.nav-up input {
+  align-items: center;
+  width: 90%;
+  height: 75%;
+  margin: auto;
+  border: 2px solid rgb(60, 60, 60);
+  border-radius: 20px;
+  font-family: futura-pt, sans-serif;
+  font-size: 15px;
+  text-indent: 10px;
+}
+
+.top-right-icons {
+  color: white;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.nav-middle ul {
+  height: 50px;
+  background-color: rgb(100, 100, 100);
+  padding-left: 120px;
+}
+
+.nav-middle ul li {
+  display: inline-block;
+  padding: 15px;
+  color: white;
+}
+
+.nav-middle ul a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.nav-middle ul li.active {
+  background-color: #d01345;
+  font-weight: bold;
+  transform: skew(-12deg);
+  /* height: 100%; */
+}
+
+.nav-middle ul li.active a {
+    transform: skew(12deg);
+    display: inline-block;
+}
+
+.nav-middle ul li:hover {
+  background-color: white;
+  background-size: 500px;
+  color: black;
+}
+
+.nav-middle ul li:hover a {
+  color: inherit;
+}
+
+.nav-bottom {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  border-bottom: 1px solid white;
+  height: 50px;
+}
+
+.nav-bottom div {
+  width: 50%;
+  margin: auto;
+}
+
+.nav-bottom .women2 {
+  margin-left: 90px !important;
+}
+
+.nav-bottom .men2 {
+  margin-right: 90px !important;
+}
+
+.nav-bottom .women2 a {
+  display: grid;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav-bottom .women2 a:hover {
+  display: grid;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  opacity: 0.5;
+}
+
+.nav-bottom .men2 a {
+  display: grid;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav-bottom .men2 a:hover {
+  display: grid;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  opacity: 0.5;
+}
+
+.nav-bottom div p {
+  text-align: center;
+  padding: 5px;
+  font-family: futura-pt, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-bottom div p::after {
+  background-color: white;
+  border: 1px solid #888;
+  border-radius: 2px;
+  color: #444;
+  content: attr(titlew);
+  display: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 10px;
+  padding: 10px 10px;
+}
+.nav-bottom div p:hover::after {
+  display: block;
+  position: absolute;
+}
+
+.boxes {
+  background-color: #ff385c;
+  display: grid;
+  grid-template-rows: 300px 300px;
+}
+
+.item1 {
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  font-family: futura-pt, sans-serif;
+  font-weight: bold;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.item2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-around;
+  column-gap: 20px;
+  width: 85%;
+  margin: auto;
+}
+
+.box {
+  display: grid;
+  grid-template-rows: 85% 15%;
+}
+
+.box img {
+  width: 100%;
+  height: 255px;
+}
+
+.box p {
+    height: 100%;
+  background-color: white;
+  color: black;
+  font-family: Futura Std Condensed;
+  font-weight: bold;
+  font-size: 15x;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+
+
