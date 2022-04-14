@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style2.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
@@ -14,35 +16,98 @@
   <body>
     <div class="wrapper">
       <!-- 3 Navigations -->
+      
       <nav class="nav-up">
+        <button class="hamburger">
+            <span class="material-icons">menu</span>
+            <div class="hamburger-dropdown">
+            <ul class="hamburger-dropdowntop">
+                <li class="hamburger-dropdowntop-hover"><b>WOMEN</b></li>
+                <li class="hamburger-dropdowntop-hover"><b>MEN</b></li>
+            </ul>
+            <ul class="hamburger-dropdownbottom">
+                <li class="selected"><a href="#">HOME</a></li>
+                <li class="hamburger-dropdownbottom-colored"><a href="#">SALE: NOW UP TO <br>80% OFF</a></li>
+                <li><a href="#">NEW IN</a></li>
+                <li><a href="#">SHOES</a></li>
+                <li><a href="#">SPORTSWEAR</a></li>
+                <li><a href="#">ACCESSORIES</a></li>
+                <li><a href="#">TRENDING NOW</a></li>
+                <li><a href="#">TOPSHOP</a></li>
+                <li><a href="#">FACE + BODY</a></li>
+                <li><a href="#">BRANDS</a></li>
+                <li><a href="#">OUTLET</a></li>
+                <li class="selected" id="hamburger-dropdownbottom-fullwidth"><a href="">DISCOVER MORE</a></li>
+                <li><a href="#">MARKETPLACE</a></li>
+                
+            </ul>
+            </div>
+        </button>
         <div>
-          <img src="download.png" alt="" />
+          <img src="download.png" alt="asos logo" />
           <div class="women">
             <a href="#">WOMEN</a>
           </div>
           <div class="men">
             <a href="#">MEN</a>
           </div>
-          
-          <input type="text" placeholder="Search for items and brands" />
+          <div class="input-icons">
+              <input type="text" placeholder="Search for items and brands"/> 
+              <i class="fas fa-heart fa-1x"></i>
+          </div>
           <div class="top-right-icons">
             <div>
-              <i class="fas fa-chart-pie fa-1x"></i>
-            </div>
-            <div>
-              <i class="fas fa-chart-pie fa-1x"></i>
-            </div>
-            <div>
-              <i class="fas fa-chart-pie fa-1x"></i>
+             <div><i class="fas fa-heart fa-1x"></i></div> 
+             <div><i class="fas fa-heart fa-1x"></i></div>
+             <div><i class="fas fa-heart fa-1x"></i></div>
             </div>
           </div>
         </div>
       </nav>
 
       <nav class="nav-middle">
-        <ul>
+        <ul id="main-list">
           <li class="active"><a href="#">Sale</a></li>
-          <li><a href="#">New in</a></li>
+            
+         <li class="dropdown"><a href="#">New in</a> 
+                 <div class="dropdown-content">
+                      <div class="dropdown-box1">
+                
+                           <p>NEW PRODUCTS</p>
+                        
+                        
+                           <ul>
+                                <li><a href="#">View all</a></li> 
+                                <li><a href="#">Clothing</a> </li> 
+                                <li><a href="#">Shoes</a></li> 
+                                <li><a href="#">Accessories</a></li> 
+                                <li><a href="#">Face + Body</a></li>
+                                <li><a href="#">Topshop</a></li>
+                                <li><a href="#"> Back in stock</a></li>
+                                <li><a href="#">Trending now</a></li> 
+                           </ul> 
+                           
+                        </div>
+                            <div class="dropdown-box2">
+                           <p>SHOP BY BODY FIT</p>
+                        <div>
+                       <div><img src="https://images.asos-media.com/navigation/ww_gbl_newin_curveplussize_3M_114998343?&$n_240w$" alt=""></div> 
+                       <div><img src="https://images.asos-media.com/navigation/ww_gbl_newin_curveplussize_3M_114998343?&$n_240w$" alt=""></div> 
+                       <div><img src="https://images.asos-media.com/navigation/ww_gbl_newin_curveplussize_3M_114998343?&$n_240w$" alt=""></div> 
+                       <div> <img src="https://images.asos-media.com/navigation/ww_gbl_newin_curveplussize_3M_114998343?&$n_240w$" alt=""></div> 
+                        </div>
+                        </div>
+                            <div class="dropdown-box3">
+                             <p>NEW EDITS</p>
+                            <div>
+                          <div> <img src="https://images.asos-media.com/navigation/ww_gbl_newin_curveplussize_3M_114998343?&$n_240w$" alt=""> </div> 
+                        <div><img src="https://images.asos-media.com/navigation/ww_gbl_newin_curveplussize_3M_114998343?&$n_240w$" alt=""></div>
+                        </div> 
+                        </div>
+                </div>
+                </li>  
+             
+
           <li><a href="#">Clothing</a></li>
           <li><a href="#">Shoes</a></li>
           <li><a href="#">Sportswear</a></li>

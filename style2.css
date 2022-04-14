@@ -5,8 +5,46 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.hamburger {
+  display: none;
+}
 .nav-up {
-  background-color: black;
+  background-color: rgb(40, 38, 38);
   height: 60px;
 }
 
@@ -18,10 +56,10 @@
   margin: 0 76px;
 }
 
-img {
+.nav-up div img {
   width: 120px;
   height: 60%;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .women,
@@ -32,7 +70,7 @@ img {
 .nav-up div a {
   text-decoration: none;
   color: white;
-  font-family: futura-pt, sans-serif;
+  font-family: futura-pt, FuturaStd, Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
   height: 100%;
@@ -45,13 +83,13 @@ img {
 }
 
 .nav-up div.women:hover {
-  background-color: rgb(100, 100, 100);
+  background-color: #525050;
   color: white;
   background-size: 60px;
 }
 
 .nav-up div.men:hover {
-  background-color: rgb(100, 100, 100);
+  background-color: #525050;
   color: white;
 }
 
@@ -60,11 +98,14 @@ img {
   background-size: 60px;
 }
 
-.nav-up input {
-  align-items: center;
+.nav-up .input-icons {
+  position: relative;
+}
+
+.nav-up .input-icons input {
   width: 90%;
   height: 75%;
-  margin: auto;
+  margin: 5px 30px;
   border: 2px solid rgb(60, 60, 60);
   border-radius: 20px;
   font-family: futura-pt, sans-serif;
@@ -72,30 +113,43 @@ img {
   text-indent: 10px;
 }
 
-.top-right-icons {
-  color: white;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+.nav-up .input-icons .fa-1x {
+  position: absolute;
+  right: 60px;
+  bottom: 25px;
+  color: black;
 }
 
-.nav-middle ul {
+.top-right-icons {
+  color: white;
+  padding: 20px 0;
+}
+
+.top-right-icons div {
+  display: inline-flex;
+  width: 150px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+.nav-middle > ul {
   height: 50px;
-  background-color: rgb(100, 100, 100);
-  padding-left: 120px;
+  background-color: #525050;
+  padding-left: 90px;
 }
 
 .nav-middle ul li {
   display: inline-block;
-  padding: 15px;
+  padding: 15px 5px;
   color: white;
+  /* margin-left: 0px; */
 }
 
 .nav-middle ul a {
   color: white;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: futura-pt, FuturaStd, Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
 
@@ -107,10 +161,10 @@ img {
 }
 
 .nav-middle ul li.active a {
-    transform: skew(12deg);
-    display: inline-block;
+  transform: skew(12deg);
+  display: inline-block;
 }
-
+/* BUNA GORE NEW IN ICHINDEKI BUTUN HOVERLER AG RENG OLUR - id ver*/
 .nav-middle ul li:hover {
   background-color: white;
   background-size: 500px;
@@ -119,6 +173,123 @@ img {
 
 .nav-middle ul li:hover a {
   color: inherit;
+}
+.nav-middle {
+    position: relative;
+}
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 90%;
+  margin: auto;
+  left: 5%;
+  top: 50px;
+  height: 400px;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  z-index: 1;
+}
+
+.dropdown-content .dropdown-box1 {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  row-gap: 0;
+  padding: 0;
+  padding-left: 30px;
+  border-right: 1px solid rgb(211, 204, 204);
+}
+
+.dropdown-content .dropdown-box1 p {
+  color: black;
+  display: grid;
+  align-content: center;
+  justify-content: start;
+  grid-row: 1fr;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: underline #666 1px;
+  font-weight: 900;
+}
+
+.dropdown-content .dropdown-box1 ul {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+}
+.dropdown-content .dropdown-box1 ul li {
+  padding: 0;
+}
+
+.dropdown-content .dropdown-box1 ul li a {
+  text-decoration: none;
+  color: #666;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+.dropdown-content .dropdown-box1 ul li a:hover {
+  color: rgb(43, 43, 199);
+}
+.dropdown-content .dropdown-box2 {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  padding-left: 30px;
+  border-right: 1px solid rgb(211, 204, 204);
+}
+.dropdown-content .dropdown-box2 p {
+  color: black;
+  display: grid;
+  align-content: center;
+  justify-content: start;
+  grid-row: 1fr;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: underline #666 1px;
+  font-weight: 900;
+}
+
+.dropdown-content .dropdown-box2 > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.dropdown-content .dropdown-box2 div img {
+  width: 90%;
+  height: 70%;
+  /* margin-left: -5px; */
+}
+
+.dropdown-content .dropdown-box3 {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  padding-left: 30px;
+}
+.dropdown-content .dropdown-box3 p {
+  color: black;
+  display: grid;
+  align-content: center;
+  justify-content: start;
+  grid-row: 1fr;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: underline #666 1px;
+  font-weight: 900;
+}
+
+.dropdown-content .dropdown-box3 > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown-content .dropdown-box3 div img {
+  width: 90%;
+  height: 100%;
 }
 
 .nav-bottom {
@@ -227,14 +398,16 @@ img {
 .item1 {
   text-align: center;
   font-size: 40px;
+  line-height: 80px;
+  letter-spacing: 2.8px;
+  font-weight: 900;
+  font-style: italic;
   color: black;
-  font-family: futura-pt, sans-serif;
-  font-weight: bold;
+  font-family: futura-pt, FuturaStd, Helvetica, Arial, sans-serif;
   height: 100%;
   display: grid;
   align-content: center;
   justify-content: center;
-
 }
 
 .item2 {
@@ -257,10 +430,10 @@ img {
 }
 
 .box p {
-    height: 100%;
+  height: 100%;
   background-color: white;
   color: black;
-  font-family: Futura Std Condensed;
+  font-family: futura-pt, FuturaStd, Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 15x;
   display: grid;
@@ -268,5 +441,263 @@ img {
   justify-content: center;
 }
 
+@media screen and (min-width: 842px) and (max-width: 1120px) {
+    .boxes {
+        background-color: #ff385c;
+        display: grid;
+        grid-template-rows: 300px 600px;
+      }
+
+    .boxes .item2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 20px;
+      }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-middle {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 767px) and (max-width: 841px) {
+    .nav-middle,
+    .nav-bottom,
+    .nav-up .input-icons,
+    .women,
+    .men {
+      display: none;
+    }
+
+    .nav-up {
+        display: flex;
+      }
+    
+      .nav-up .top-right-icons > div {
+        position: absolute;
+        right: 0px;
+      }
+    
+      .nav-up .hamburger {
+        display: inline-block;
+        background-color: rgb(40, 38, 38);
+      }
+
+      .hamburger-dropdown {
+        display: none; 
+     } 
+    
+    .hamburger:hover .hamburger-dropdown {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 325px;
+      background-color: white;
+      color: black;
+      display: grid;
+      grid-template-rows: 1fr 26fr;
+    }
+    
+     .hamburger-dropdowntop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 1px solid rgb(204, 201, 201);
+    }
+    
+    .hamburger-dropdowntop li {
+        border-left: 1px solid rgb(204, 201, 201);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hamburger-dropdowntop-hover:hover {
+        border: 1px solid blue ;
+        border-bottom: 3px solid black ;
+    } 
+    
+    .hamburger-dropdownbottom {
+        display: grid;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr 2fr;
+        padding: 15px 15px;
+        row-gap: 15px;
+        
+    }
+    
+    .hamburger-dropdownbottom li {
+        background-color: #e4e2e2;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        row-gap: 0;
+        height: 100px;
+    }
+    
+    .hamburger-dropdownbottom li.selected {
+        height: 50px;
+    }
+    
+    .hamburger-dropdownbottom li.hamburger-dropdownbottom-colored {
+        background-color: #ff385c;
+    }
+    
+    .hamburger-dropdownbottom #hamburger-dropdownbottom-fullwidth
+    {
+        padding: 0;
+    }
+    
+    
+    .hamburger-dropdownbottom li a {
+        color: black;
+        text-align: left;
+    }
+    
+      .nav-up .hamburger span {
+        color: white;
+      }
+    
+      .boxes {
+        background-color: #ff385c;
+        display: grid;
+        grid-template-rows: 300px 700px;
+      }
+    
+      .boxes .item1 {
+        font-size: 35px;
+        line-height: 60px;
+        display: grid;
+      }
+
+    
+      .boxes .item2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    
+      }
+    
+   
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .nav-middle,
+  .nav-bottom,
+  .nav-up .input-icons,
+  .women,
+  .men {
+    display: none;
+  }
+
+  .nav-up {
+    display: flex;
+  }
+
+  .nav-up .top-right-icons > div {
+    position: absolute;
+    right: 0px;
+  }
+
+  .nav-up .hamburger {
+    display: inline-block;
+    background-color: rgb(40, 38, 38);
+  }
+
+ .hamburger-dropdown {
+    display: none; 
+ } 
+
+.hamburger:hover .hamburger-dropdown {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 325px;
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-template-rows: 1fr 26fr;
+}
+
+ .hamburger-dropdowntop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid rgb(204, 201, 201);
+}
+
+.hamburger-dropdowntop li {
+    border-left: 1px solid rgb(204, 201, 201);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-dropdowntop-hover:hover {
+    border: 1px solid blue ;
+    border-bottom: 3px solid black ;
+} 
+
+.hamburger-dropdownbottom {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr 2fr;
+    padding: 15px 15px;
+    row-gap: 15px;
+    
+}
+
+.hamburger-dropdownbottom li {
+    background-color: #e4e2e2;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    row-gap: 0;
+    height: 100px;
+}
+
+.hamburger-dropdownbottom li.selected {
+    height: 50px;
+}
+
+.hamburger-dropdownbottom li.hamburger-dropdownbottom-colored {
+    background-color: #ff385c;
+}
+
+.hamburger-dropdownbottom #hamburger-dropdownbottom-fullwidth
+{
+    padding: 0;
+}
 
 
+.hamburger-dropdownbottom li a {
+    color: black;
+    text-align: left;
+}
+
+  .nav-up .hamburger span {
+    color: white;
+  }
+
+  .boxes {
+    background-color: #ff385c;
+    display: grid;
+    grid-template-rows: 200px 900px;
+  }
+
+  .boxes .item1 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .boxes .item2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    gap: 20px;
+    width: 85%;
+    margin: auto;
+  }
+  
+}
+
+/* Problems: .nav-middle New-in'inin icindeki (dropdownda olan) li'lerdeki hover main li'lerin hoverini alir.  */
